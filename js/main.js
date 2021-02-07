@@ -1,10 +1,8 @@
-myfunction = (id) => {
+findFoodBySearch = (id) => {
     // console.log(id.slice(7));
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-
+    
     let idNo = id.slice(7);
-    let getContainer = document.getElementById("single-item");
+    let getContainer = document.getElementById("item");
     getContainer.innerHTML = "";
     let mealId = arrayOfAllMeals[idNo];
     let markup = `
@@ -14,16 +12,16 @@ myfunction = (id) => {
         <h3 class="h4 text-light">${mealId.strMeal}</h3>
         <hr class="col-5 mx-auto bg-light">
         <div class="text-left text-white">
-            <p>Area: ${mealId}<br>Category: ${mealId.strCategory}</p>
+            
             <h5 class="text-white h5">Ingredients:</h5>
             <ul id="allIngre" class="ml-4 text-light">
             </ul>
-            <p><span class="text-warning">Instruction:</span><br>${mealId.strInstructions}</p>
-            <small class="font-italic">Tags:  ${mealId.strTags}</small>
+
+            
         </div>
         <br>
         <br>
-        <a href=" ${mealId.strYoutube}" class="text-danger text-center bg-white p-2 rounded" target="_blank">Watch the Process</a>
+        
     `;
     getContainer.innerHTML = markup;
 
@@ -73,7 +71,7 @@ searchButton.addEventListener("click", () => {
                         <img src="${imageLink}" class="img-fluid img-2" alt="">
                         <h6 class="h6 mt-2 text-center font-weight-bolder">${mealName}</h6>
                         <div class="col-6 px-0 mx-auto">
-                            <button onclick="myfunction(this.id)" id="btn-no-${i}" class="btn-sm btn btn-outline-secondary">Details</button>
+                            <button onclick="findFoodBySearch(this.id)" id="btn-no-${i}" class="btn-sm btn btn-outline-secondary">Details</button>
                         </div>
                     </div>
                     `;
