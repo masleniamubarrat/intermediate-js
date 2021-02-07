@@ -1,10 +1,10 @@
 findFoodBySearch = (id) => {
     // console.log(id.slice(7));
     
-    let idNo = id.slice(7);
-    let getContainer = document.getElementById("item");
-    getContainer.innerHTML = "";
-    let mealId = arrayOfAllMeals[idNo];
+    let IdNum = id.slice(7);
+    let ContainerGet = document.getElementById("item");
+    ContainerGet.innerHTML = "";
+    let mealId = arrayOfAllMeals[IdNum];
     let markup = `
         <img src="${mealId.strMealThumb}" class="img-fluid rounded img-1" alt="">
         <br>
@@ -23,7 +23,7 @@ findFoodBySearch = (id) => {
         <br>
         
     `;
-    getContainer.innerHTML = markup;
+    ContainerGet.innerHTML = markup;
 
     let ulOfInge = document.getElementById("allIngre");
     const nameofIng = "strIngredient1";
@@ -68,7 +68,7 @@ searchButton.addEventListener("click", () => {
                     let imageLink = meal.strMealThumb;
                     let markup = `
                     <div class="searched-item">
-                        <img src="${imageLink}" class="img-fluid img-2" alt="">
+                    <img src="${imageLink}" class="img-fluid img-2" alt="">
                         <h6 class="h6 mt-2 text-center font-weight-bolder">${mealName}</h6>
                         <div class="col-6 px-0 mx-auto">
                             <button onclick="findFoodBySearch(this.id)" id="btn-no-${i}" class="btn-sm btn btn-outline-secondary">Details</button>
