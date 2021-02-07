@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: #2d3436;
+    background-color: #a468f1;
 }
 a{
     text-decoration: none;
@@ -29,10 +29,10 @@ input{
 }
 .searched-item{
     width: 200px;
-    background-color: white;
+    background-color: rgba(177, 171, 171, 0.623);
     padding: 10px;
     border-radius: 8px;
-    border: 2px solid sienna;
+    border: 2px solid rgb(78, 7, 61);
     margin: 5px;
 }
 .img-2{
